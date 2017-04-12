@@ -1,16 +1,13 @@
-# ehcache-jsr107-spring
+# Ehcache 3.x JSR-107 Spring 4.0 Demo
+Just another demo forked from [@gibsong](https://github.com/gibsong/ehcache-jsr107-spring).
+I tried to config **Disk Tier** in `ehcache.xml`. By trials and errors, This config success to use caching on disk
 
+## Running the application:
+* at the project root directory in command-line, type `mvnw spring-boot:run` 
+* open browser, goto `http://localhost:8080/person/{ssn}` where {ssn} should be replaced by an actual number,
+like the following: `http://localhost:8080/person/987654321`
 
-Building the application:
--This application can be built using maven 3.2 or above.  Make sure you are in the project root directory "ehcache3-jsr107-spring", or if you renamed it then it's the directory with the pom.xml file.  Now from the command line type:
-mvn clean install
-
-Running the application:
--Once again use maven to run this application, and you must be in the project root directory. From the command line type:
-mvn spring-boot:run
-
-What is the application url?
--The url template is http://localhost:8080/person/{ssn} where {ssn} should be replaced by an actual number, like the following:
-http://localhost:8080/person/987654321
-
-
+## Documentation
+* `/person/{ssn}` print Person infomation with number `ssn`
+* `/cache/{ssn}` print cache of Person with number `ssn`
+* `/caches` print name of all available caches
